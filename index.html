@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <title>Древо мороза</title>
+    <script src="familytree.js"></script>
+  </head>
+  <body>
+    <div id="tree"></div>
+    <script>
+let family = new FamilyTree("#tree", {
+  levelSeparation: 100,
+  scaleMax: 2,
+  scaleMin: 0.5,
+  scaleInitial: FamilyTree.match.width,
+  searchDisplayField: "name",
+  nodeMouseClick: FamilyTree.action.details,
+  orientation: FamilyTree.orientation.top_left,
+  partnerChildrenSplitSeparation: 150,
+  toolbar: {
+         layout: true,
+         zoom: true,
+         fit: true,
+         expandAll: false,
+         fullScreen: true
+     },
+    // options
+    nodeBinding: {
+        field_0: "name",
+        field_1: "birthday"
+    },
+    editForm: {titleBinding: "name", photoBinding: "imageUrl"},
+    nodes: [
+        { id: 1, pids: [2],mid: 11, fid: 12, name: "Мороз Ольга", gender: "female", birthday: "1950-05-09" },
+        { id: 2, pids: [1],mid: 13, fid: 14, name: "Мороз Теофиль", gender: "male",  birthday: "1949-06-29"},
+        { id: 3, mid: 1, fid: 2,pids: [9], name: "Сорока Елена", gender: "female" ,birthday: "1972-06-13"},
+        { id: 4, mid: 1, fid: 2, pids:[5,7], name: "Изотова Татьяна", gender: "female",birthday: "1979-08-09" },
+        { id: 5, pids:[4], name: "Изотов Антон", gender: "male", },
+        { id: 6, mid: 4, fid: 5, name: "Изотов Кирилл", gender: "male",birthday: "2010-08-05" },
+        { id: 7, pids:[4], name: "Каханович Василий", gender: "male" },
+        { id: 8, mid: 4, fid: 7, name: "Изотов Семен",birthday: "2018-01-12", gender: "male", imageUrl: "https://cdn.balkan.app/shared/anim/1.gif" },
+        { id: 9, pids:[3], name: "Сорока Игорь", gender: "male",birthday: "1971-06-01" }, 
+        { id: 10, mid:3, fid: 9, name: "Сорока Алексей", gender: "male",birthday: "1994-09-15"  }, 
+        { id: 11, pids: [12], name: "Екатерина", gender: "female" },
+        { id: 12, pids: [11], name: "Владимир", gender: "male" },
+        { id: 13, pids: [14], name: "?", gender: "female" },
+        { id: 14, pids: [13], name: "Алексей", gender: "male" },
+        { id: 15, mid: 13, fid: 14, name: "Василий", gender: "male" },
+        { id: 16, mid: 13, fid: 14, name: "Владимир", gender: "male" },
+        
+
+]   
+        
+});
+
+  const tree = {
+    imageUrl: "",
+    name: "Теофиль Мороз",
+    birthday: "1949-06-29",
+    children: [
+      {
+        name: "Елена Сорока",
+        birthday: "1972-06-13"
+      },
+      {
+        name: "Татьяна Изотова",
+        birthday: "1979-08-09",
+        children:[
+          {
+            name: "Изотов Кирилл",
+            birthday: '2010-08-05',
+          },
+          {
+            name: "Семен Изотов",
+            birthday:"2018-01-12"
+          }
+        ]
+      }
+    ]
+  }
+</script>
+  </body>
+</html>
