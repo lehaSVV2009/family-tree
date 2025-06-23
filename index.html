@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title>Древо Деда Мороза</title>
+  <title>Древо Мороза Теофиля</title>
   <script src="familytree.js"></script>
 </head>
 
@@ -29,7 +29,6 @@
       nodeBinding: {
         field_0: "name",
         field_1: "birthday",
-        field_2: "address",
       },
       editForm: { titleBinding: "name", photoBinding: "imageUrl" },
       roots: [14],
@@ -50,7 +49,7 @@
         { id: 11, mid: 66, fid: 67, pids: [12], name: "Коваленко Екатерина", birthday: "1926-07-30 - 200?" },
         { id: 12, pids: [11], name: "Владимир", },
 
-        { id: 13, pids: [14], name: "Мороз (Пшеничняк) Мария", birthday: "1912-03-12 - ?1996" },
+        { id: 13, pids: [14], name: "Мороз Мария (Пшеничняк)", birthday: "1912-03-12 - ?1996" },
         { id: 14, pids: [13], name: "Мороз Алексей", birthday: "?1908-03-12 - 1968" },
 
         { id: 15, mid: 13, fid: 14, pids: [48], name: "Мороз Василий", birthday: "? - 1968", },
@@ -94,7 +93,11 @@
         { id: 24, pids: [25], name: "Сорока Петр" },
         { id: 25, pids: [24], name: "Сорока Валентина" },
         { id: 26, mid: 25, fid: 24, name: "Сорока Николай", gender: "male", address: "Кривой Рог, Украина" },
-        { id: 27, mid: 25, fid: 24, name: "? Надежда", gender: "female", address: "Городня, Черниговская обл., Украина" },
+
+        { id: 27, mid: 25, fid: 24, pids: [93], name: "? Надежда", gender: "female", address: "Городня, Черниговская обл., Украина" },
+        { id: 93, pids: [27], name: "? Николай", address: "Городня, Черниговская обл., Украина" },
+        { id: 94, mid: 27, fid: 93, name: "? Наталья", gender: "female", address: "Ирландия" },
+        { id: 95, mid: 94, name: "? Кирилл", gender: "male", address: "Ирландия" },
 
         { id: 28, pids: [29], name: "Романенко Иван" },
         { id: 29, pids: [28], name: "Романенко Татьяна" },
@@ -123,7 +126,7 @@
         { id: 34, mid: 33, fid: 32, name: "Романенко Роман", gender: "male", address: "Уречье, Минская обл., Беларусь" },
 
         { id: 66, pids: [67], name: "Коваленко Максим" },
-        { id: 67, pids: [66], name: "Коваленко (Воронянская) Татьяна", birthday: "1898-01-18 - ?1995"},
+        { id: 67, pids: [66], name: "Коваленко Татьяна (Воронянская)", birthday: "1898-01-18 - ?1995"},
 
         { id: 68, mid: 67, fid: 66, name: "Коваленко Алексей"},
         { id: 69, mid: 67, fid: 66, name: "Коваленко Надежда" },
@@ -142,7 +145,6 @@
 
         { id: 76, mid: 74, fid: 72, name: "Макаренко Алексей", gender: "male", birthday: "?", address: "?ОАЭ" },
         { id: 80, fid: 76, name: "Макаренко?", gender: "female", birthday: "?", address: "?ОАЭ" },
-        
       ]
     });
 
