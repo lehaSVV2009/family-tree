@@ -1,81 +1,103 @@
 <html>
-  <head>
-    <title>Древо мороза</title>
-    <script src="familytree.js"></script>
-  </head>
-  <body>
-    <div id="tree"></div>
-    <script>
-let family = new FamilyTree("#tree", {
-  levelSeparation: 100,
-  scaleMax: 2,
-  scaleMin: 0.5,
-  scaleInitial: FamilyTree.match.width,
-  searchDisplayField: "name",
-  nodeMouseClick: FamilyTree.action.details,
-  orientation: FamilyTree.orientation.top_left,
-  partnerChildrenSplitSeparation: 150,
-  toolbar: {
-         layout: true,
-         zoom: true,
-         fit: true,
-         expandAll: false,
-         fullScreen: true
-     },
-    // options
-    nodeBinding: {
-        field_0: "name",
-        field_1: "birthday"
-    },
-    editForm: {titleBinding: "name", photoBinding: "imageUrl"},
-    nodes: [
-        { id: 1, pids: [2],mid: 11, fid: 12, name: "Мороз Ольга", gender: "female", birthday: "1950-05-09" },
-        { id: 2, pids: [1],mid: 13, fid: 14, name: "Мороз Теофиль", gender: "male",  birthday: "1949-06-29"},
-        { id: 3, mid: 1, fid: 2,pids: [9], name: "Сорока Елена", gender: "female" ,birthday: "1972-06-13"},
-        { id: 4, mid: 1, fid: 2, pids:[5,7], name: "Изотова Татьяна", gender: "female",birthday: "1979-08-09" },
-        { id: 5, pids:[4], name: "Изотов Антон", gender: "male", },
-        { id: 6, mid: 4, fid: 5, name: "Изотов Кирилл", gender: "male",birthday: "2010-08-05" },
-        { id: 7, pids:[4], name: "Каханович Василий", gender: "male" },
-        { id: 8, mid: 4, fid: 7, name: "Изотов Семен",birthday: "2018-01-12", gender: "male", imageUrl: "https://cdn.balkan.app/shared/anim/1.gif" },
-        { id: 9, pids:[3], name: "Сорока Игорь", gender: "male",birthday: "1971-06-01" }, 
-        { id: 10, mid:3, fid: 9, name: "Сорока Алексей", gender: "male",birthday: "1994-09-15"  }, 
-        { id: 11, pids: [12], name: "Екатерина", gender: "female" },
-        { id: 12, pids: [11], name: "Владимир", gender: "male" },
-        { id: 13, pids: [14], name: "?", gender: "female" },
-        { id: 14, pids: [13], name: "Алексей", gender: "male" },
-        { id: 15, mid: 13, fid: 14, name: "Василий", gender: "male" },
-        { id: 16, mid: 13, fid: 14, name: "Владимир", gender: "male" },
-        
 
-]   
-        
-});
+<head>
+  <title>Древо Мороза Теофиля</title>
+  <script src="familytree.js"></script>
+</head>
 
-  const tree = {
-    imageUrl: "",
-    name: "Теофиль Мороз",
-    birthday: "1949-06-29",
-    children: [
-      {
-        name: "Елена Сорока",
-        birthday: "1972-06-13"
+<body>
+  <div id="tree"></div>
+  <script>
+    let family = new FamilyTree("#tree", {
+      levelSeparation: 100,
+      enablePan: true,
+      scaleMax: 2,
+      scaleMin: 0.5,
+      scaleInitial: FamilyTree.match.width,
+      searchDisplayField: "name",
+      nodeMouseClick: FamilyTree.action.details,
+      orientation: FamilyTree.orientation.top_left,
+      partnerChildrenSplitSeparation: 150,
+      toolbar: {
+        layout: true,
+        zoom: true,
+        fit: true,
+        expandAll: true,
+        fullScreen: true
       },
-      {
-        name: "Татьяна Изотова",
-        birthday: "1979-08-09",
-        children:[
-          {
-            name: "Изотов Кирилл",
-            birthday: '2010-08-05',
-          },
-          {
-            name: "Семен Изотов",
-            birthday:"2018-01-12"
-          }
-        ]
-      }
-    ]
-  }
-</script>
-  </body>
+      // options
+      nodeBinding: {
+        field_0: "name",
+        field_1: "birthday",
+        field_2: "address",
+      },
+      editForm: { titleBinding: "name", photoBinding: "imageUrl" },
+      roots: [14],
+      nodes: [
+        { id: 1, pids: [2], mid: 11, fid: 12, name: "Мороз Ольга", birthday: "1949-05-09 - 1999-..", address: "Слуцк, Минская обл., Беларусь" },
+        { id: 2, pids: [1], mid: 13, fid: 14, name: "Мороз Теофиль", gender: "male", birthday: "1949-06-29", address: "Слуцк, Беларусь", imageUrl: "https://vki7.okcdn.ru/i?r=CFxAm_VFBkioSGBqh1LQEi-UYfOukfLW98nyNTTueEhmQr1cyRw7GX934yNZg2MtNutHKCycwd11EAza9WqlQKy11tpcuGaSbjmg4lAEdiOJ7mlinx06mgktLWHoAAAAKQ&dpr=2" },
+
+        { id: 4, mid: 1, fid: 2, pids: [5, 7], name: "Изотова Татьяна", gender: "female", birthday: "1979-08-09", address: "Минск, Беларусь", imageUrl: "https://vki7.okcdn.ru/i?r=CFtAm_VFBkioSGBqh1Lj-1DGTfMIrQcldkclwaraGjDN_mkl-eF8koUSUU_FkjdatK9RkIp-KZ_jvc0j4HXQtAQFXOwg_TlODDCWeRwR65J5hDlc_b-lOncEMWcAAAAp&dpr=2" },
+        { id: 5, pids: [4], name: "Изотов Антон", gender: "male", address: "Минск, Беларусь" },
+        { id: 6, mid: 4, fid: 5, name: "Изотов Кирилл", gender: "male", birthday: "2010-08-05", address: "Минск, Беларусь" },
+        { id: 7, pids: [4], name: "Каханович Василий", gender: "male", address: "Минск, Беларусь" },
+        { id: 8, mid: 4, fid: 7, name: "Изотов Семен", birthday: "2018-01-12", gender: "male", imageUrl: "https://cdn.balkan.app/shared/anim/1.gif", address: "Минск, Беларусь" },
+
+        { id: 3, mid: 1, fid: 2, pids: [9], name: "Сорока Елена", gender: "female", birthday: "1972-06-13", imageUrl: "https://scontent-arn2-1.cdninstagram.com/v/t51.2885-19/33711894_387561568416513_948778483507527680_n.jpg?stp=dst-jpg_s320x320_tt6&_nc_ht=scontent-arn2-1.cdninstagram.com&_nc_cat=109&_nc_oc=Q6cZ2QGU-gdSofVV17CNGBhXKt4JF2cuqVyHhZTlE7WPtVU-JEVmb81a3uwZHuDWwS7Xl7I&_nc_ohc=jNG9LKM6F2oQ7kNvwE-NB-B&_nc_gid=6BpZBG0vR8jKyFbBu0FhmA&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfOliL2SLFD1okkUX3XhQXr13joKxut17JxlmGBBegaNvA&oe=685EA97C&_nc_sid=8b3546", address: "Борисов, Беларусь" },
+        { id: 9, mid: 18, fid: 17, pids: [3], name: "Сорока Игорь", birthday: "1971-06-01 - 2007-03-05", address: "Уречье, Минская обл., Беларусь" },
+        { id: 10, mid: 3, fid: 9, name: "Сорока Алексей", gender: "male", birthday: "1994-09-15", imageUrl: "https://lehasvv2009.github.io/resume/avatar.jpeg", link: "https://www.instagram.com/aliaksei_40a", phone: "+375336389581", address: "Минск, Беларусь" },
+
+        { id: 11, pids: [12], name: "Екатерина", birthday: "" },
+        { id: 12, pids: [11], name: "Владимир", },
+
+        { id: 13, pids: [14], name: "Мороз ?" },
+        { id: 14, pids: [13], name: "Мороз Алексей" },
+        { id: 15, mid: 13, fid: 14, name: "Мороз Василий", },
+        { id: 16, mid: 13, fid: 14, name: "Мороз Владимир", gender: "male", address: "с.Лысо, Ивано-франковская обл., Украина" },
+
+        { id: 17, mid: 25, fid: 24, pids: [18], name: "Сорока Алексей", birthday: "1949-02-21 - 2021-10-..", address: "Уречье, Минская обл., Беларусь", imageUrl: "https://vki7.okcdn.ru/i?r=CFtAm_VFBkioSGBqh1KpzYVIRglkQZwv3BrJtPhrkRsqiqrWu6qnh28XPxwLUiJR6wEYjUrPWw5DDM6LJzo4gGuRKd0S2EkNE-9L3rmk39tXS8ydBPUa35PoxgUAAAAp&dpr=2" },
+        { id: 18, mid: 29, fid: 28, pids: [17], name: "Сорока Зинаида", gender: "female", birthday: "1950-06-28", address: "Уречье, Минская обл., Беларусь", imageUrl: "https://vki7.okcdn.ru/i?r=CFtAm_VFBkioSGBqh1JAIlBwux0uG3sjfK_aiyrG_Q54AR_VOAHQmQiMZgTET_spHpc7o-1DOI5VWAnpVvgNNH_QRtLrQ8tndgCt2aGRMUxYCznEkRNjTAHXnnkAAAAp&dpr=2" },
+        { id: 19, mid: 18, fid: 17, pids: [20], name: "Трухан Инна", birthday: "1976-11-10", gender: "female", address: "Минск, Беларусь" },
+        { id: 20, pids: [19], name: "Трухан Сергей", birthday: "1974-05-28", gender: "male", address: "Минск, Беларусь" },
+        { id: 21, mid: 19, fid: 20, name: "Трухан Арина", birthday: "2004-05-13", gender: "female",address: "Минск, Беларусь" },
+        { id: 22, mid: 19, fid: 20, name: "Трухан Александр", birthday: "2004-05-13", gender: "female", address: "Минск, Беларусь" },
+        { id: 23, mid: 19, fid: 20, name: "Трухан София", birthday: "2004-05-13", gender: "female", address: "Минск, Беларусь" },
+
+        { id: 24, pids: [25], name: "Сорока Петр" },
+        { id: 25, pids: [24], name: "Сорока ?" },
+        { id: 26, mid: 25, fid: 24, name: "Сорока Николай", gender: "male", address: "Кривой Рог, Украина" },
+        { id: 27, mid: 25, fid: 24, name: "? Надежда", gender: "female", address: "Городня, Черниговская обл., Украина" },
+
+        { id: 28, pids: [29], name: "Романенко Иван" },
+        { id: 29, pids: [28], name: "Романенко ?" },
+        { id: 30, mid: 29, fid: 28, name: "Романенко Иван" },
+
+        { id: 31, mid: 29, fid: 28, pids: [35], name: "Астрейко Анатолий", gender: "male", address: "Уречье, Минская обл., Беларусь" },
+        { id: 35, pids: [31], name: "Астрейко Тамара", gender: "female", address: "Уречье, Минская обл., Беларусь" },
+
+        { id: 36, mid: 35, fid: 31, pids: [39], name: "Дроздова Светлана", gender: "female", address: "Минск, Беларусь" },
+        { id: 39, pids: [36], name: "Дроздов Андрей", address: "Минск, Беларусь" },
+        { id: 40, mid: 36, fid: 39, name: "Дроздов Дмитрий", gender: "male", address: "Минск, Беларусь" },
+
+        { id: 37, mid: 35, fid: 31, pids: [41], name: "Астрейко Юрий", gender: "male", address: "Уречье, Минская обл., Беларусь" },
+        { id: 41, pids: [37], name: "Астрейко Надежда", gender: "female", address: "Уречье, Минская обл., Беларусь" },
+        { id: 42, mid: 41, fid: 37, name: "Астрейко Николай", gender: "male" },
+        { id: 47, mid: 41, fid: 37, name: "Астрейко Михаил", gender: "male" },
+
+        { id: 38, mid: 35, fid: 31, pids: [43], name: "Астрейко Максим", gender: "male", address: "Уречье, Минская обл., Беларусь" },
+        { id: 43, pids: [38], name: "Астрейко ?", gender: "female", address: "Уречье, Минская обл., Беларусь" },
+        { id: 44, mid: 43, fid: 38, name: "Астрейко ?", gender: "male", address: "Уречье, Минская обл., Беларусь" },
+        { id: 45, mid: 43, fid: 38, name: "Астрейко ?", gender: "male", address: "Уречье, Минская обл., Беларусь" },
+        { id: 46, mid: 43, fid: 38, name: "Астрейко ?", gender: "female", address: "Уречье, Минская обл., Беларусь" },
+
+        { id: 32, mid: 29, fid: 28, pids: [33], name: "Романенко Владимир", address: "Уречье, Минская обл., Беларусь" },
+        { id: 33, pids: [32], name: "Романенко Татьяна", gender: "female", address: "Уречье, Минская обл., Беларусь" },
+        { id: 34, mid: 33, fid: 32, name: "Романенко Роман", gender: "male", address: "Уречье, Минская обл., Беларусь" },
+
+      ]
+    });
+
+  </script>
+</body>
+
 </html>
