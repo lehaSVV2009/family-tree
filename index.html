@@ -34,26 +34,54 @@
       editForm: { titleBinding: "name", photoBinding: "imageUrl" },
       roots: [14],
       nodes: [
-        { id: 1, pids: [2], mid: 11, fid: 12, name: "Мороз Ольга", birthday: "1949-05-09 - 1999-..", address: "Слуцк, Минская обл., Беларусь" },
+        { id: 1, pids: [2], mid: 11, fid: 12, name: "Мороз Ольга", birthday: "1949-05-09 - 1999-07-14", address: "Слуцк, Минская обл., Беларусь" },
         { id: 2, pids: [1], mid: 13, fid: 14, name: "Мороз Теофиль", gender: "male", birthday: "1949-06-29", address: "Слуцк, Беларусь", imageUrl: "https://vki7.okcdn.ru/i?r=CFxAm_VFBkioSGBqh1LQEi-UYfOukfLW98nyNTTueEhmQr1cyRw7GX934yNZg2MtNutHKCycwd11EAza9WqlQKy11tpcuGaSbjmg4lAEdiOJ7mlinx06mgktLWHoAAAAKQ&dpr=2" },
 
         { id: 4, mid: 1, fid: 2, pids: [5, 7], name: "Изотова Татьяна", gender: "female", birthday: "1979-08-09", address: "Минск, Беларусь", imageUrl: "https://vki7.okcdn.ru/i?r=CFtAm_VFBkioSGBqh1Lj-1DGTfMIrQcldkclwaraGjDN_mkl-eF8koUSUU_FkjdatK9RkIp-KZ_jvc0j4HXQtAQFXOwg_TlODDCWeRwR65J5hDlc_b-lOncEMWcAAAAp&dpr=2" },
-        { id: 5, pids: [4], name: "Изотов Антон", gender: "male", address: "Минск, Беларусь" },
+        { id: 5, pids: [4], name: "Изотов Антон", birthday: "1981-02-?", gender: "male", address: "Минск, Беларусь" },
         { id: 6, mid: 4, fid: 5, name: "Изотов Кирилл", gender: "male", birthday: "2010-08-05", address: "Минск, Беларусь" },
-        { id: 7, pids: [4], name: "Каханович Василий", gender: "male", address: "Минск, Беларусь" },
+        { id: 7, pids: [4], name: "Каханович Василий", gender: "male", birthday: "1977-01-08", address: "Минск, Беларусь" },
         { id: 8, mid: 4, fid: 7, name: "Изотов Семен", birthday: "2018-01-12", gender: "male", imageUrl: "https://cdn.balkan.app/shared/anim/1.gif", address: "Минск, Беларусь" },
 
         { id: 3, mid: 1, fid: 2, pids: [9], name: "Сорока Елена", gender: "female", birthday: "1972-06-13", imageUrl: "https://scontent-arn2-1.cdninstagram.com/v/t51.2885-19/33711894_387561568416513_948778483507527680_n.jpg?stp=dst-jpg_s320x320_tt6&_nc_ht=scontent-arn2-1.cdninstagram.com&_nc_cat=109&_nc_oc=Q6cZ2QGU-gdSofVV17CNGBhXKt4JF2cuqVyHhZTlE7WPtVU-JEVmb81a3uwZHuDWwS7Xl7I&_nc_ohc=jNG9LKM6F2oQ7kNvwE-NB-B&_nc_gid=6BpZBG0vR8jKyFbBu0FhmA&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfOliL2SLFD1okkUX3XhQXr13joKxut17JxlmGBBegaNvA&oe=685EA97C&_nc_sid=8b3546", address: "Борисов, Беларусь" },
-        { id: 9, mid: 18, fid: 17, pids: [3], name: "Сорока Игорь", birthday: "1971-06-01 - 2007-03-05", address: "Уречье, Минская обл., Беларусь" },
+        { id: 9, mid: 18, fid: 17, pids: [3], name: "Сорока Игорь", birthday: "1971-06-01 - 2008-03-05", address: "Уречье, Минская обл., Беларусь" },
         { id: 10, mid: 3, fid: 9, name: "Сорока Алексей", gender: "male", birthday: "1994-09-15", imageUrl: "https://lehasvv2009.github.io/resume/avatar.jpeg", link: "https://www.instagram.com/aliaksei_40a", phone: "+375336389581", address: "Минск, Беларусь" },
 
-        { id: 11, pids: [12], name: "Екатерина", birthday: "" },
+        { id: 11, pids: [12], name: "Коваленко Екатерина", birthday: "1926-07-30 - 200?" },
         { id: 12, pids: [11], name: "Владимир", },
 
-        { id: 13, pids: [14], name: "Мороз ?" },
-        { id: 14, pids: [13], name: "Мороз Алексей" },
-        { id: 15, mid: 13, fid: 14, name: "Мороз Василий", },
-        { id: 16, mid: 13, fid: 14, name: "Мороз Владимир", gender: "male", address: "с.Лысо, Ивано-франковская обл., Украина" },
+        { id: 13, pids: [14], name: "Мороз Мария", birthday: "1912-03-12 - ?1996" },
+        { id: 14, pids: [13], name: "Мороз Алексей", birthday: "?1908-03-12 - 1968" },
+
+        { id: 15, mid: 13, fid: 14, pids: [48], name: "Мороз Василий", birthday: "? - 1968", },
+        { id: 48, pids: [15], name: "Мороз Галина" },
+        { id: 49, mid: 48, fid: 15, pids: [63], name: "Мороз Михаил", gender: "male", birthday: "196?" },
+        { id: 63, pids: [49], name: "Мороз Галина", gender: "female" },
+        { id: 64, mid: 63, fid: 49, gender: "male", name: "Мороз Василий" },
+        { id: 65, mid: 63, fid: 49, gender: "male", name: "Мороз Тарас" },
+
+
+        { id: 50, mid: 48, fid: 15, name: "Мороз Олег", birthday: "1968 - ?2013" },
+        { id: 66, fid: 50, name: "Мороз ? дочь", gender: "female"},
+        
+        { id: 51, mid: 48, fid: 15, pids: [55], name: "Перегинец Марийка", gender: "female", birthday: "1970" },
+        { id: 55, pids: [51], name: "Перегинец Андрей", gender: "male" },
+
+        { id: 56, mid: 51, fid: 55, name: "Перегинец Оксана", gender: "female", birthday: "?1990" },
+        { id: 57, mid: 51, fid: 55, name: "Перегинец Галина", gender: "female", birthday: "?1990" },
+        { id: 58, mid: 51, fid: 55, name: "Перегинец Андрей", gender: "male", birthday: "?" },
+
+        { id: 16, mid: 13, fid: 14, pids: [52], name: "Мороз Владимир", birthday: "1944", gender: "male", address: "с.Лысо, Ивано-Франковская обл., Украина" },
+        { id: 52, pids: [16], name: "Мороз Мария", gender: "female", address: "с.Лысо, Ивано-Франковская обл., Украина" },
+        
+        { id: 53, mid: 52, fid: 16, pids: [59], name: "Мороз Василий", gender: "male", birthday: "1968" },
+        { id: 59, pids: [53], name: "Мороз Ольга", gender: "female" },
+        { id: 60, mid: 59, fid: 53, name: "Мороз Руслан", gender: "male" },
+        { id: 61, mid: 59, fid: 53, name: "Мороз ?", gender: "female" },
+
+
+        { id: 54, mid: 52, fid: 16, name: "Мороз Михаил", gender: "male", birthday: "1972" },
+        { id: 62, fid: 54, name: "дочь ?", gender: "female" },
 
         { id: 17, mid: 25, fid: 24, pids: [18], name: "Сорока Алексей", birthday: "1949-02-21 - 2021-10-..", address: "Уречье, Минская обл., Беларусь", imageUrl: "https://vki7.okcdn.ru/i?r=CFtAm_VFBkioSGBqh1KpzYVIRglkQZwv3BrJtPhrkRsqiqrWu6qnh28XPxwLUiJR6wEYjUrPWw5DDM6LJzo4gGuRKd0S2EkNE-9L3rmk39tXS8ydBPUa35PoxgUAAAAp&dpr=2" },
         { id: 18, mid: 29, fid: 28, pids: [17], name: "Сорока Зинаида", gender: "female", birthday: "1950-06-28", address: "Уречье, Минская обл., Беларусь", imageUrl: "https://vki7.okcdn.ru/i?r=CFtAm_VFBkioSGBqh1JAIlBwux0uG3sjfK_aiyrG_Q54AR_VOAHQmQiMZgTET_spHpc7o-1DOI5VWAnpVvgNNH_QRtLrQ8tndgCt2aGRMUxYCznEkRNjTAHXnnkAAAAp&dpr=2" },
@@ -64,12 +92,12 @@
         { id: 23, mid: 19, fid: 20, name: "Трухан София", birthday: "2004-05-13", gender: "female", address: "Минск, Беларусь" },
 
         { id: 24, pids: [25], name: "Сорока Петр" },
-        { id: 25, pids: [24], name: "Сорока ?" },
+        { id: 25, pids: [24], name: "Сорока Валентина" },
         { id: 26, mid: 25, fid: 24, name: "Сорока Николай", gender: "male", address: "Кривой Рог, Украина" },
         { id: 27, mid: 25, fid: 24, name: "? Надежда", gender: "female", address: "Городня, Черниговская обл., Украина" },
 
         { id: 28, pids: [29], name: "Романенко Иван" },
-        { id: 29, pids: [28], name: "Романенко ?" },
+        { id: 29, pids: [28], name: "Романенко Татьяна" },
         { id: 30, mid: 29, fid: 28, name: "Романенко Иван" },
 
         { id: 31, mid: 29, fid: 28, pids: [35], name: "Астрейко Анатолий", gender: "male", address: "Уречье, Минская обл., Беларусь" },
