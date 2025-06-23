@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title>Древо Мороза Теофиля</title>
+  <title>Древо Деда Мороза</title>
   <script src="familytree.js"></script>
 </head>
 
@@ -34,7 +34,7 @@
       editForm: { titleBinding: "name", photoBinding: "imageUrl" },
       roots: [14],
       nodes: [
-        { id: 1, pids: [2], mid: 11, fid: 12, name: "Мороз Ольга", birthday: "1949-05-09 - 1999-07-14", address: "Слуцк, Минская обл., Беларусь" },
+        { id: 1, pids: [2], mid: 11, fid: 12, name: "Мороз Ольга", birthday: "1949-05-09 - 1999-07-14", address: "Селище, Минская обл., Беларусь" },
         { id: 2, pids: [1], mid: 13, fid: 14, name: "Мороз Теофиль", gender: "male", birthday: "1949-06-29", address: "Слуцк, Беларусь", imageUrl: "https://vki7.okcdn.ru/i?r=CFxAm_VFBkioSGBqh1LQEi-UYfOukfLW98nyNTTueEhmQr1cyRw7GX934yNZg2MtNutHKCycwd11EAza9WqlQKy11tpcuGaSbjmg4lAEdiOJ7mlinx06mgktLWHoAAAAKQ&dpr=2" },
 
         { id: 4, mid: 1, fid: 2, pids: [5, 7], name: "Изотова Татьяна", gender: "female", birthday: "1979-08-09", address: "Минск, Беларусь", imageUrl: "https://vki7.okcdn.ru/i?r=CFtAm_VFBkioSGBqh1Lj-1DGTfMIrQcldkclwaraGjDN_mkl-eF8koUSUU_FkjdatK9RkIp-KZ_jvc0j4HXQtAQFXOwg_TlODDCWeRwR65J5hDlc_b-lOncEMWcAAAAp&dpr=2" },
@@ -43,14 +43,14 @@
         { id: 7, pids: [4], name: "Каханович Василий", gender: "male", birthday: "1977-01-08", address: "Минск, Беларусь" },
         { id: 8, mid: 4, fid: 7, name: "Изотов Семен", birthday: "2018-01-12", gender: "male", imageUrl: "https://cdn.balkan.app/shared/anim/1.gif", address: "Минск, Беларусь" },
 
-        { id: 3, mid: 1, fid: 2, pids: [9], name: "Сорока Елена", gender: "female", birthday: "1972-06-13", imageUrl: "https://scontent-arn2-1.cdninstagram.com/v/t51.2885-19/33711894_387561568416513_948778483507527680_n.jpg?stp=dst-jpg_s320x320_tt6&_nc_ht=scontent-arn2-1.cdninstagram.com&_nc_cat=109&_nc_oc=Q6cZ2QGU-gdSofVV17CNGBhXKt4JF2cuqVyHhZTlE7WPtVU-JEVmb81a3uwZHuDWwS7Xl7I&_nc_ohc=jNG9LKM6F2oQ7kNvwE-NB-B&_nc_gid=6BpZBG0vR8jKyFbBu0FhmA&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfOliL2SLFD1okkUX3XhQXr13joKxut17JxlmGBBegaNvA&oe=685EA97C&_nc_sid=8b3546", address: "Борисов, Беларусь" },
+        { id: 3, mid: 1, fid: 2, pids: [9], name: "Сорока Елена", gender: "female", birthday: "1972-06-13", address: "Борисов, Беларусь" },
         { id: 9, mid: 18, fid: 17, pids: [3], name: "Сорока Игорь", birthday: "1971-06-01 - 2008-03-05", address: "Уречье, Минская обл., Беларусь" },
         { id: 10, mid: 3, fid: 9, name: "Сорока Алексей", gender: "male", birthday: "1994-09-15", imageUrl: "https://lehasvv2009.github.io/resume/avatar.jpeg", link: "https://www.instagram.com/aliaksei_40a", phone: "+375336389581", address: "Минск, Беларусь" },
 
-        { id: 11, pids: [12], name: "Коваленко Екатерина", birthday: "1926-07-30 - 200?" },
+        { id: 11, mid: 66, fid: 67, pids: [12], name: "Коваленко Екатерина", birthday: "1926-07-30 - 200?" },
         { id: 12, pids: [11], name: "Владимир", },
 
-        { id: 13, pids: [14], name: "Мороз Мария", birthday: "1912-03-12 - ?1996" },
+        { id: 13, pids: [14], name: "Мороз (Пшеничняк) Мария", birthday: "1912-03-12 - ?1996" },
         { id: 14, pids: [13], name: "Мороз Алексей", birthday: "?1908-03-12 - 1968" },
 
         { id: 15, mid: 13, fid: 14, pids: [48], name: "Мороз Василий", birthday: "? - 1968", },
@@ -62,7 +62,7 @@
 
 
         { id: 50, mid: 48, fid: 15, name: "Мороз Олег", birthday: "1968 - ?2013" },
-        { id: 66, fid: 50, name: "Мороз ? дочь", gender: "female"},
+        { id: 90, fid: 50, name: "Мороз ? дочь", gender: "female"},
         
         { id: 51, mid: 48, fid: 15, pids: [55], name: "Перегинец Марийка", gender: "female", birthday: "1970" },
         { id: 55, pids: [51], name: "Перегинец Андрей", gender: "male" },
@@ -122,6 +122,27 @@
         { id: 33, pids: [32], name: "Романенко Татьяна", gender: "female", address: "Уречье, Минская обл., Беларусь" },
         { id: 34, mid: 33, fid: 32, name: "Романенко Роман", gender: "male", address: "Уречье, Минская обл., Беларусь" },
 
+        { id: 66, pids: [67], name: "Коваленко Максим" },
+        { id: 67, pids: [66], name: "Коваленко (Воронянская) Татьяна", birthday: "1898-01-18 - ?1995"},
+
+        { id: 68, mid: 67, fid: 66, name: "Коваленко Алексей"},
+        { id: 69, mid: 67, fid: 66, name: "Коваленко Надежда" },
+        { id: 70, mid: 69, pids: [71], name: "Макаренко Любовь", gender: "female", address: "Новосанжары, Полтавская обл., Украина" },
+        { id: 71, pids: [70], name: "Макаренко Анатолий", gender: "male", address: "Новосанжары, Полтавская обл., Украина" },
+        { id: 73, mid: 70, fid: 71, pids: [92], name: "Горбенко Антонина (Макаренко)", birthday: "?1966-10-14 - ", address: "Новосанжары, Полтавская обл., Украина" },
+        { id: 92, pids: [73], name: "Горбенко Сергей", gender: "male", address: "Новосанжары, Полтавская обл., Украина" },
+        { id: 91, mid: 73, fid: 92, name: "Горбенко Анна", gender: "female", address: "Киев, Украина" },
+
+        { id: 72, mid: 70, fid: 71, pids: [74], name: "Макаренко Александр", gender: "male", birthday: "1963-10-12", address: "США" },
+        { id: 74, pids: [72], name: "Макаренко Нина", gender: "female", birthday: "-08-?", address: "США" },
+        { id: 75, mid: 74, fid: 72, pids: [79], name: "Бойчук Наталья", gender: "female", birthday: "?", address: "США" },
+        { id: 79, pids: [75], name: "Бойчук Андрей", gender: "male", birthday: "?", address: "США" },
+        { id: 77, mid: 75, fid: 79, name: "Бойчук Ангелина", gender: "female", birthday: "?", address: "США" },
+        { id: 78, mid: 75, fid: 79, name: "Бойчук Каролина", gender: "female", birthday: "?", address: "США" },
+
+        { id: 76, mid: 74, fid: 72, name: "Макаренко Алексей", gender: "male", birthday: "?", address: "?ОАЭ" },
+        { id: 80, fid: 76, name: "Макаренко?", gender: "female", birthday: "?", address: "?ОАЭ" },
+        
       ]
     });
 
